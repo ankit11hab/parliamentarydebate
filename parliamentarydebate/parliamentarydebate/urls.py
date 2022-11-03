@@ -16,8 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main import views
+from main.forms import IndependentAdjudicatorCreationsForm
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index),
-    path('submit/',views.updatedata)
+    path('',views.home),
+    path('form1',views.registerInstitute,name="teams"),
+    path('form3',views.registerAdjudicators,name="adjudicators"),
+    path('form2',views.registerCrossOpen,name="crossOpen")
+
+
 ]

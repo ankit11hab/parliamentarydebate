@@ -1,4 +1,5 @@
 <!DOCTYPE html> {% load static %}
+{% load crispy_forms_tags %}
 <html lang="en">
 
 <head>
@@ -290,7 +291,7 @@
         #toggled-nav-bar{
             display: none;
         }
-    }
+    
 </style>
 <body style="background-color:black">
 
@@ -483,65 +484,17 @@
                 <span class="close material-symbols-outlined" id="closeb">close</span><span id="registertitle">Register As</span></div>
 
             <ul style="display: flex;justify-content:space-between;">
-                <li id="modallist1" class="modal-list2-active"><a id="modal-list1">Institutional Team/Contingent</a></li>
-                <li id="modallist2" class="modal-list2-inactive"><a id="modal-list2">Cross/Open</a></li>
-                <li id="modallist3" class="modal-list2-inactive"><a id="modal-list3">Indepent Adjudicator</a></li>
+                <li id="modallist1" class="modal-list2-active"><a id="modal-list1" href="/form1" {% url 'teams' %}>Institutional Team/Contingent</a></li>
+                <li id="modallist2" class="modal-list2-inactive"><a id="modal-list2" href="/form2" {% url 'crossOpen' %}>Cross/Open</a></li>
+                <li id="modallist3" class="modal-list2-inactive"><a id="modal-list3" href="/form3" {% url 'adjudicators' %}>Independent Adjudicator</a></li>
 
 
 
             </ul>
-            <div id="team-registration">
-                <form action="submit/" method="POST">
-                    {% csrf_token %}
-                    <p class="mandatory-field">Fields marked <span style="color: red;">*</span> are mandatory</p>
-                    <div class="info">
-                        <div class="input-field">
-                            <p>Phone number <span style="color: red;">*</span></p>
-                            <input type="number" name="number" placeholder="Contact Number" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-                        </div>
-                        <div class="input-field">
-                            <p>Email ID <span style="color: red;">*</span></p>
-                            <input type="email" name="EmailID" placeholder="Email ID" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-                        </div>
+    
+            
 
-                    </div>
-                    <div style="display: flex; justify-content:center;">
-                        <input type="submit" value="REGISTER">
-                    </div>
-                </form>
-
-            </div>
-            <div id="cross-open"></div>
-            <div id="independent-adjudicator" style="display: none;">
-                <form action="submit/" method="POST">
-                    {% csrf_token %}
-                    <table>
-                        <tr>
-                            <td style="text-align:right;font-weight:bold;font-size:1.2vw"><label for="Name">Name</label></td>
-                            <td style="font-weight:bold;font-size:1.2vw;">:</td>
-                            <td><input type="text" id="Name1" placeholder="" name="name">
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td style="text-align:right;font-weight:bold;font-size:1.2vw"><label for="College">College</label></td>
-                            <td style="font-weight:bold;font-size:1.2vw;">:</td>
-                            <td><input type="text" id="lname" placeholder="" name="college2"></td>
-                        </tr>
-
-                        <tr>
-                            <td style="text-align:right;font-weight:bold;font-size:1.2vw"><label for="Contact">Contact No </label></td>
-                            <td style="font-weight:bold;font-size:1.2vw;">:</td>
-                            <td><input type="text" id="Contact" placeholder="" name="contactno2"></td>
-                        </tr>
-                        <td></td>
-                        <td></td>
-                    </table>
-                    <input type="submit" value="Proceed to Pay">
-                </form>
-
-            </div>
+           
         </div>
 
     </div>
@@ -675,6 +628,7 @@
                 modal.style.display = "none";
             }
         }
+        console.log("{{AdjudicatorsForm}}")
     </script>
     <script>
         $("#modal-list1").click(function() {

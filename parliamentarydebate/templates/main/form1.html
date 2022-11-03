@@ -1,0 +1,43 @@
+<div id="team-registration">
+    <form method="POST">
+        {% csrf_token %}
+        <!-- <p class="mandatory-field">Fields marked <span style="color: red;">*</span> are mandatory</p>
+        <div class="info">
+            <div class="input-field">
+                <p>Name of Point of Contact <span style="color: red;">*</span></p>
+                {{InstituteForm.email}}
+            </div>
+            <div class="input-field">
+                <p>Institute Name <span style="color: red;">*</span></p>
+                <input type="text" name="college" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+            <div class="input-field">
+                <p>Email ID <span style="color: red;">*</span></p>
+                <input type="email" name="email" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+
+            <div class="input-field">
+                <p>Contact No. <span style="color: red;">*</span></p>
+                <input type="number" name="number" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+
+            <div class="input-field">
+                <p>No. Of TeamSlots <span style="color: red;">*</span></p>
+                <input type="number" name="teamslots" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+            <div class="input-field">
+                <p>Any additional information you would like to tell to us<span style="color: red;">*</span></p>
+                <input type="text" name="info" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+
+        </div>
+        <div style="display: flex; justify-content:center;">
+            <input type="submit" value="REGISTER">
+        </div> -->
+        {{ InstituteForm }}
+        <div style="display: flex; justify-content:center;">
+            <input type="submit" value="REGISTER">
+        </div>
+    </form>
+
+</div>

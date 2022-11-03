@@ -1,0 +1,40 @@
+<div id="cross-open" >
+    <form method="POST">
+        {% csrf_token %}
+        <!-- <p class="mandatory-field">Fields marked <span style="color: red;">*</span> are mandatory</p>
+        <div class="info">
+            <div class="input-field">
+                <p>Name of Team <span style="color: red;">*</span></p>
+                <input type="text" name="teamname" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+            <div class="input-field">
+                <p>Country <span style="color: red;">*</span></p>
+                <input type="text" name="country" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+            <div class="input-field">
+                <p>Email ID <span style="color: red;">*</span></p>
+                <input type="email" name="email" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+
+            <div class="input-field">
+                <p>Contact No. <span style="color: red;">*</span></p>
+                <input type="number" name="number" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+
+            <div class="input-field">
+                <p>Name of Point of Contact <span style="color: red;">*</span></p>
+                <input type="text" name="POCname" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+            <div class="input-field">
+                <p>Any additional information you would like to tell to us<span style="color: red;">*</span></p>
+                <input type="text" name="info" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+
+        </div> -->
+        {{ AdjudicatorsForm }}
+        <div style="display: flex; justify-content:center;">
+            <input type="submit" value="REGISTER">
+        </div>
+    </form>
+
+</div>

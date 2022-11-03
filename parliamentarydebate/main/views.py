@@ -1,24 +1,39 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import teams,adjudicators
+from .forms import IndependentAdjudicatorCreationsForm,institutionCreationsForm,crossOpenCreationsForm
+from django.utils.html import strip_tags
 # Create your views here.
-def index(request):
-    return render(request,'pd.html')
+def home(request):
+    return render(request,'main/pd.html')
 
-def updatedata(request):
-    if request.method=='POST':
-        if request.POST.get('name1') and request.POST.get('name2') and request.POST.get('name3') and request.POST.get('contactno1') and request.POST.get('college1'):
-            team=teams()
-            team.Name1=request.POST.get('name1')
-            team.Name2=request.POST.get('name2')
-            team.Name3=request.POST.get('name3')
-            team.College=request.POST.get('college1')
-            team.Contactno=request.POST.get('contact1')
-            
-            return HttpResponse("successful")
-        if request.POST.get('name') and request.POST.get('college2') and request.POST.get('contactno2'):
-            adjudicators=adjudicator()
-            adjudicator.name=request.POST.get('name')
-            adjudicator.college=request.POST.get('college2')
-            adjudicator.contactno=request.POST.get('contactno2')
-        
+
+def registerInstitute(request):
+        instituteForm = institutionCreationsForm(request.POST or None)
+        if request.method == 'POST':
+            if instituteForm.is_valid():
+                result = instituteForm.save(commit=False)
+                result.save()
+        else:
+           instituteForm = institutionCreationsForm()
+        return render(request, 'main/form1.html', {'InstituteForm': instituteForm, })
+
+def registerAdjudicators(request):
+        adjudicatorsForm = IndependentAdjudicatorCreationsForm(request.POST or None)
+        if request.method == 'POST':
+            if adjudicatorsForm.is_valid():
+                result = adjudicatorsForm.save(commit=False)
+                result.save()
+        else:
+           adjudicatorsForm = IndependentAdjudicatorCreationsForm()
+        return render(request, 'main/form2.html', {'AdjudicatorsForm': adjudicatorsForm, })
+
+def registerCrossOpen(request):
+        crossopenForm = crossOpenCreationsForm(request.POST or None)
+        if request.method == 'POST':
+            if crossopenForm.is_valid():
+                result = crossopenForm.save(commit=False)
+                result.save()
+        else:
+           crossopenForm = crossOpenCreationsForm()
+        return render(request, 'main/form3.html', {'CrossopenForm': crossopenForm, })
