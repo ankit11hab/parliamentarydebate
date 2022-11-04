@@ -49,7 +49,7 @@
         }
         #inner-text2{
             font-family: 'Lato', sans-serif;
-            font-weight: 200;
+            font-weight: 400;
             position: relative;
             top: 30vw;
             left: 11vw;
@@ -73,7 +73,7 @@
             color: black;
             position: relative;
             top: 2.5vw;
-            left: 2.5vw;
+            left: 2.8vw;
         }
         #alcher-logo{
             position: relative;
@@ -105,18 +105,26 @@
             color: black;
             position: relative;
             top: 2.5vw;
-            left: 2.8vw;
+            left: 3.1vw;
         }
         #bars{
             display: inline-block;
             width:10vw;
-            height: 10vw;
             position: relative;
             left: -5vw;
-            top: -1.2vw;
-            overflow: hidden;
+            top: 1.2vw;
+            /* overflow: hidden; */
+
         }
-        
+        #cross{
+            display: none;
+            width:10vw;
+            position: relative;
+            left: -5vw;
+            top: 1.2vw;
+            /* overflow: hidden; */
+            margin-left: -27.6vw;
+        }
         /* The new navigation bar must be hidden unless the user clicks the menu button (3 bars) */
         #toggled-nav-bar{
             display: none;
@@ -133,23 +141,21 @@
         .toggled-item{
             margin-bottom: 8vh;
         }
-            td{
+        td{
             display: block;
             margin: 0;
-            }
-            .organise {
-                text-align: center;
-
-
-            }
-            table{
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #registercontainer{
-                display: flex;
+        }
+        .organise {
+            text-align: center;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #registercontainer{
+            display: flex;
             justify-content: center;
-            }
+        }
     }
 
     /* For screen sizes greater than 480px */
@@ -169,7 +175,7 @@
         #pd{
             position: relative;
             top: 0.6vw;
-            left: -1.5vw;
+            left: -1.0vw;
             font-family: 'Lato', sans-serif;
             font-weight: bold;
             font-size: 1.8vw
@@ -213,8 +219,8 @@
         #reg{
             color: black;
             position: relative;
-            top: 0.6vw;
-            left: 1.2vw;
+            top: 0.8vw;
+            left: 1.5vw;
         }
         #image{
             overflow: hidden;
@@ -240,7 +246,7 @@
         }
         #inner-text2{
             font-family: 'Lato', sans-serif;
-            font-weight: 200;
+            font-weight: 400;
             position: relative;
             top: 12vw;
             left: 11vw;
@@ -248,7 +254,7 @@
         }
         #register-button{
             width: 8vw;
-            height: 2vw;
+            height: 2.5vw;
             background: #FFD601;
             border-radius: 33px;
             font-size: 1vw;
@@ -258,7 +264,7 @@
             margin-left: 2%;
             position: relative;
             top: 0.3vw;
-            left: -1vw;
+            left: -2.5vw;
         }
 
         /* Register button on the image */
@@ -280,7 +286,7 @@
             color: black;
             position: relative;
             top: 0.8vw;
-            left: 1.3vw;
+            left: 1.7vw;
         }
 
         /* The bars and toggle nav bar must be hidden in desktop view */
@@ -310,7 +316,9 @@
         <span id="bars">
             <img src="{% static "main/images/bars.png" %}" alt="" id="toggle-bars">
         </span>
-
+        <span id="cross">
+            <img src="{% static "main/images/cross.png" %}" alt="" id="toggle-cross">
+        </span>
     </ul>
 
     <!-- New Toggled navigation menu in the mobile view -->
@@ -350,8 +358,7 @@
     </nav>
     <section id="about"  class="organise" style="height:100%;padding-top:5vw;">
 
-        <span style="color:#FFD601
-">About </span>
+        <span style="color:#FFD601">About </span>
        <br><br>
         <p class="para" style="text-align:left;"">Lorem ipsum dolor sit amet,consectetur adipiscing elit. Orci nisl aliquet interdum<br>
          habitasse imperdiet. Velit nulla nisi, curabitur sagittis eu nec luctus nec morbi.<br>
@@ -729,18 +736,22 @@
     
     var element1 = document.getElementById("image"); 
     var element2 = document.getElementById("toggled-nav-bar");
-    x.addEventListener("click",change);
-    function change(){
+    var cross = document.getElementById("cross");
+    x.addEventListener("click",change1);
+    function change1(){
         var image = document.getElementById("toggle-bars");
-        if(image.getAttribute("src")=="{% static "main/images/cross.png" %}"){
-            image.setAttribute("src","{% static "main/images/bars.png" %}");
-            element1.style.display = "block";
-            element2.style.display = "none";
-        }else{
-            image.setAttribute("src","{% static "main/images/cross.png" %}"); 
-            element1.style.display = "none";
-            element2.style.display = "block";
-        }
+        cross.style.display = "inline";
+        x.style.display = "none";
+        element1.style.display = "none";
+        element2.style.display = "block";
+    }
+    cross.addEventListener("click",change2);
+    function change2(){
+        var image = document.getElementById("toggle-bars");
+        x.style.display = "inline";
+        cross.style.display = "none";
+        element1.style.display = "block";
+        element2.style.display = "none";
     }
 </script>
 
