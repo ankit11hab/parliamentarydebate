@@ -1,68 +1,126 @@
+<title>Registration</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <form  method="POST">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+    body{
+        background-color: black;
+        font-family: 'Lato', sans-serif;
+    }
+    #id_TeamName {
+    width: 80%;
+    background-color: transparent;
+    border: 1;
+    border-width:.2;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    border-color: brown;
+ 
+}
+#id_email {
+    width: 80%;
+    background-color: transparent;
+    border: 1;
+    border-width:.2;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    border-color: brown;
+}
+#id_Country{
+    width: 80%;
+    background-color: transparent;
+    border: 1;
+    border-width:.2;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    border-color: brown;
+}
+#id_contactno {
+    width: 80%;
+    background-color: transparent;
+    border: 1;
+    border-width:.2;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+   outline: none;
+    border-color: brown;
+}
+#id_Name_of_Poc {
+    width: 80%;
+    background-color: transparent;
+    border: 1;
+    border-width:.2;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    border-color: brown;
+}
+#id_info{
+    width: 80%;
+    background-color: transparent;
+    border: 1;
+    border-width:.2;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    border-color: brown;
+}
+
+</style>
+{% load crispy_forms_tags %}
+<div id="team-registration" style="margin-left:20; margin-top:20;font-size:20;">
+    <p style="font-size:42; color:yellow;text-align:center;margin-bottom: 20px;">Cross/Open</p>
+    <form method="POST" style="color: white;" >
+
         {% csrf_token %}
-        <!-- <p class="mandatory-field">Fields marked <span style="color: red;">*</span> are mandatory</p>
-        <div class="info">
-            <div class="input-field">
-                <p>Name <span style="color: red;">*</span></p>
-                
-                {{AdjudicatorsForm.as_p}}
+        <p class="mandatory-field" style="color:white;margin-bottom: 40px;">Fields marked <span style="color: red;">*</span> are mandatory</p>
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-0">
+                <p style="color:white;">Name of Poc ( point of contact ) <span style="color: red;">*</span></p>
+                {{ CrossopenForm.Name_of_Poc }}
             </div>
-            <div class="input-field">
-                <p>Institute Name <span style="color: red;">*</span></p>
-                <input type="text" name="college" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            <div class="form-group col-md-6 mb-0">
+                <p style="color:white;">Country <span style="color: red;">*</span></p>
+                {{ CrossopenForm.Country }}
             </div>
-            <div class="input-field">
-                <p>Email ID <span style="color: red;">*</span></p>
-                <input type="email" name="email" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6 mb-0">
+                <p style="color:white;">Email address of poc  <span style="color: red;">*</span></p>
+                {{ CrossopenForm.email }}
             </div>
 
-            <div class="input-field">
-                <p>Contact No. <span style="color: red;">*</span></p>
-                <input type="number" name="number" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+            <div class="form-group col-md-6 mb-0">
+                <p style="color:white;">Contact no. Of POC <span style="color: red;">*</span></p>
+                {{ CrossopenForm.contactno }}
             </div>
-            <div class="input-field">
-                <p>Any additional information you would like to tell to us<span style="color: red;">*</span></p>
-                <input type="text" name="info" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-            </div>
-            <p>List Past Experience (if any)</p>
-            <div class="input-field">
-                <p>Tournament Name<span style="color: red;">*</span></p>
-                <input type="text" name="tourname" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-            </div>
-            <div class="input-field">
-                <p>Year<span style="color: red;">*</span></p>
-                <input type="text" name="year" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-            </div>
-            <div class="input-field">
-                <p>Format<span style="color: red;">*</span></p>
-                <input type="text" name="format" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-            </div>
-            <div class="input-field">
-                <p>Estimate size of tournament<span style="color: red;">*</span></p>
-                <input type="text" name="size" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-            </div>
-            <div class="input-field">
-                <p>Position Of Break<span style="color: red;">*</span></p>
-                <input type="text" name="POB" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-            </div> 
-            <div class="input-field">
-                <p>Furthest outround spoken<span style="color: red;">*</span></p>
-                <input type="text" name="outround" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-            </div> 
-            <div class="input-field">
-                <p>Speaker awards if applicable.<span style="color: red;">*</span></p>
-                <input type="text" name="awards" placeholder="" spellcheck="false" data-ms-editor="true" style="width: 100%;">
-            </div> 
-            
         </div>
-        <div style="display: flex; justify-content:center;">
-            <input type="submit" value="REGISTER">
-        </div> -->
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-0">
+                <p style="color:white;">Team name ( Do not use name of your Institute)  <span style="color: red;">*</span></p>
+                {{ CrossopenForm.TeamName }}
+            </div>
+            <div class="form-group col-md-6 mb-0">
+                <p style="color:white;">Any additional information you would like to tell to us</p>
+                {{ CrossopenForm.info }}
+            </div>
+</div>
+        </div>
+        <button type="submit" class="btn" style="background-color:yellow ;font-family: 'lato', sans-serif; color:black; transform:scale(1.2) translateY(50px);border-radius:12px; display: flex; margin:auto;text-align: center;">Register</button>
         
-        <div style="display: flex; justify-content:center;">
-            <input type="submit" value="REGISTER">
-        </div>
-
+        
+        
     </form>
 
+</div>

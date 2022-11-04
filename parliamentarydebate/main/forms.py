@@ -9,50 +9,51 @@ from django.contrib.auth import get_user_model
 
 
 class institutionCreationsForm(forms.ModelForm):
-  email=forms.EmailField(widget=forms.TextInput(
-    attrs={'class':'input_field'}
-  ))
+  email=forms.EmailField(
+   widget=forms.TextInput(attrs={'class':'input_field'})
+  )
   POCname=forms.CharField(
-    widget=forms.TextInput(attrs={'class':'input_field'})
+   widget=forms.TextInput(attrs={'class':'input_field'})
   )
   college=forms.CharField(
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  number=forms.CharField(widget=forms.TextInput(attrs={
-    'class': 'input_field', 'placeholder': 'Phone Number (e.g. +12125552368) *'}), label="Phone number (e.g. +12125552368)", )
-  teamslots=forms.CharField(
+  contactno=forms.CharField(
+   widget=forms.TextInput(attrs={'class': 'input_field', 'placeholder': 'Phone Number (e.g. +12125552368) *'}), label="Phone number (e.g. +12125552368)", 
+  )
+  teamSlots=forms.CharField(
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  info=forms.CharField(
+  info=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
 
   class Meta:
     model=teams
-    fields=['POCname','email','college','number','teamslots','info']
+    fields=['POCname','email','college','contactno','teamSlots','info']
 
 class crossOpenCreationsForm(forms.ModelForm):
   email=forms.EmailField(widget=forms.TextInput(
     attrs={'class':'input_field'}
   ))
-  teamname=forms.CharField(
+  TeamName=forms.CharField(
     widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  country=forms.CharField(
+  Country=forms.CharField(
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  number=forms.CharField(widget=forms.TextInput(attrs={
+  contactno=forms.CharField(widget=forms.TextInput(attrs={
     'class': 'input_field', 'placeholder': 'Phone Number (e.g. +12125552368) *'}), label="Phone number (e.g. +12125552368)", )
-  POCname=forms.CharField(
+  Name_of_Poc=forms.CharField(
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  info=forms.CharField(
+  info=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
 
   class Meta:
       model=crossOpen
-      fields=['teamname','email','country','number','POCname','info']
+      fields=['TeamName','email','Country','contactno','Name_of_Poc','info']
 
 class IndependentAdjudicatorCreationsForm(forms.ModelForm):
   email=forms.EmailField(widget=forms.TextInput(
@@ -64,35 +65,35 @@ class IndependentAdjudicatorCreationsForm(forms.ModelForm):
   college=forms.CharField(
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  number=forms.CharField(widget=forms.TextInput(attrs={
+  contactno=forms.CharField(widget=forms.TextInput(attrs={
     'class': 'input_field', 'placeholder': 'Phone Number (e.g. +12125552368) *'}), label="Phone number (e.g. +12125552368)", )
  
-  tourname=forms.CharField(
+  TournamentName=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  year=forms.CharField(
+  Year=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  format=forms.CharField(
+  Format=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  size=forms.CharField(
+  Size=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  POB=forms.CharField(
+  POB=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  outround=forms.CharField(
+  OutroundSpoken=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  awards=forms.CharField(
+  awards=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
-  info=forms.CharField(
+  info=forms.CharField(required = False,
    widget=forms.TextInput(attrs={'class':'input_field'})
   )
 
   class Meta:
       model=adjudicators
-      fields=['name','email','college','number','POB','info','outround','awards','year','format','size','tourname']
+      fields=['name','email','college','contactno','POB','info','OutroundSpoken','awards','Year','Format','Size','TournamentName']
 
