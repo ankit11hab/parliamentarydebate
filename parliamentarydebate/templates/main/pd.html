@@ -141,6 +141,7 @@
         }
         .toggled-item{
             margin-bottom: 8vh;
+            font-size: 18px;
         }
         td{
             display: block;
@@ -251,7 +252,7 @@
             position: relative;
             top: 12vw;
             left: 11vw;
-            font-size: 1.11vw;
+            font-size: 1.4vw;
         }
         #register-button{
             width: 8vw;
@@ -297,6 +298,7 @@
         #toggled-nav-bar{
             display: none;
         }
+    }
     
 </style>
 <body style="background-color:black">
@@ -335,7 +337,7 @@
 
     <div id="image">
         <div id="inner-image1">
-            <img src="{% static "main/images/Alcher.png" %}">
+            <img src="{% static 'main/images/Alcher.png' %}" style="width: 12vw;">
         </div>
         <div class="inner-text" style="color: white ;">
             PARLIAMENTARY
@@ -651,7 +653,7 @@
     </div>-->
 
 
-   <div style="font-size:3.5vw;text-align:centre;font-weight:bold;margin-top:8vw;color:#FFD601;">Adjudicators</div>
+   <div style="font-size:3.5vw;text-align:centre;font-weight:bold;margin-top:8vw;color:#FFD601;" id="adjudicators">Adjudicators</div>
    <table > 
     <tr style="text-align:center;" >
         <td style="padding-left:0"><img style="text-align:center;margin-top:5vw;" src="{% static "main/images/akansha.png" %}" alt="" class="rounded-circle">
@@ -684,7 +686,7 @@
 <div class="rect5"></div>
 <section id="highlights"  class="organise">
 
-    <div class="titlecontainerright" style="color:#FFD601">The Team</div>
+    <div class="titlecontainerright" style="color:#FFD601" id="team">The Team</div>
 
 
 
@@ -723,7 +725,7 @@
 <div class="rect2"></div>
 <section id="footer">
 
-    <div style="margin:auto;width:30%;padding:4vw;">
+    <div style="margin:auto;width:30%;padding:4vw;" id="contact">
     <h4 style="font-size:1.5vw;">Contact Us</h4>
     <span style="font-size:1vw;text-align:center">pd@alcheringa.in</p>
     <span style="font-size:1vw;text-align:center;">
@@ -839,6 +841,7 @@
     var element1 = document.getElementById("image"); 
     var element2 = document.getElementById("toggled-nav-bar");
     var cross = document.getElementById("cross");
+    cross.style.display = "none";
     x.addEventListener("click",change1);
     function change1(){
         var image = document.getElementById("toggle-bars");
