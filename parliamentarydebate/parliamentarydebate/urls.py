@@ -20,9 +20,8 @@ from main.forms import IndependentAdjudicatorCreationsForm
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home),
-    path('form1',views.registerInstitute,name="teams"),
-    path('form3',views.registerAdjudicators,name="adjudicators"),
-    path('form2',views.registerCrossOpen,name="crossOpen")
+     path('submit/',views.updatedata)
+  
 
 
 ]

@@ -7,8 +7,8 @@ from sqlalchemy import null, true
 # Create your models here.
 
 class teams(models.Model):
-    POCname=models.CharField(max_length=100)
-    college=models.CharField(max_length=100)
+    POCname=models.CharField(max_length=100,null=True)
+    college=models.CharField(max_length=100,null=True)
     email=models.EmailField(max_length=40,null=True)
     contactno=models.CharField(max_length=13,null=True)
     teamSlots=models.CharField(max_length=40,null=True)

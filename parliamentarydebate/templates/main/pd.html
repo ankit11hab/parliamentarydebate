@@ -491,17 +491,152 @@
                 <span class="close material-symbols-outlined" id="closeb">close</span><span id="registertitle">Register As</span></div>
 
             <ul style="display: flex;justify-content:space-between;">
-                <li id="modallist1" class="modal-list2-active"><a id="modal-list1" href="/form1" {% url 'teams' %}><button class="btn btn-warning" style="border-radius:22px;height: 70px; text-align: center;">Institutional Team/Contingent</button> </a></li>
-                <li id="modallist2" class="modal-list2-inactive"><a id="modal-list2" href="/form2" {% url 'crossOpen' %}><button class="btn btn-warning" style="border-radius:22px;height: 70px;">Cross/Open</button></a></li>
-                <li id="modallist3" class="modal-list2-inactive"><a id="modal-list3" href="/form3" {% url 'adjudicators' %}><button class="btn btn-warning" style="border-radius:22px;height: 70px">Independent Adjudicator</button></a></li>
+                <li id="modallist1" class="modal-list2-active"><a id="modal-list1">Institutional Team/Contingent</a></li>
+                <li id="modallist2" class="modal-list2-inactive"><a id="modal-list2">Cross/Open</a></li>
+                <li id="modallist3" class="modal-list2-inactive"><a id="modal-list3">Independent Adjudicator</a></li>
 
 
 
             </ul>
-    
-            
+            <div id="team-registration">
+                <form action="submit/" method="POST">
+                    {% csrf_token %}
+                    <p class="mandatory-field">Fields marked <span style="color: red;">*</span> are mandatory</p>
+                    <div class="info">
+                        <div class="input-field">
+                            <p>Phone number <span style="color: red;">*</span></p>
+                            <input type="number" name="contactno1" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Email ID <span style="color: red;">*</span></p>
+                            <input type="email" name="email" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>College <span style="color: red;">*</span></p>
+                            <input type="text" name="college"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Name of Point of Contact <span style="color: red;">*</span></p>
+                            <input type="text" name="POCname" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Any additional information you would like to tell to us <span style="color: red;">*</span></p>
+                            <input type="text" name="info" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>No. Of TeamSlots <span style="color: red;">*</span></p>
+                            <input type="text" name="teamSlots"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
 
-           
+                    </div>
+                    <div style="display: flex; justify-content:center;">
+                        <input type="submit" value="REGISTER">
+                    </div>
+                </form>
+
+            </div>
+            <div id="cross-open">
+                <form action="submit/" method="POST">
+                    {% csrf_token %}
+                    <p class="mandatory-field">Fields marked <span style="color: red;">*</span> are mandatory</p>
+                    <div class="info">
+                        <div class="input-field">
+                            <p>Name of Poc ( point of contact )  <span style="color: red;">*</span></p>
+                            <input type="text" name="POCname" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Country <span style="color: red;">*</span></p>
+                            <input type="text" name="country" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Email address of poc <span style="color: red;">*</span></p>
+                            <input type="email" name="email"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Contact no. Of POC <span style="color: red;">*</span></p>
+                            <input type="number" name="contactno2" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Team name ( Do not use name of your Institute) <span style="color: red;">*</span></p>
+                            <input type="text" name="teamName"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+
+                        <div class="input-field">
+                            <p>Any additional information you would like to tell to us <span style="color: red;">*</span></p>
+                            <input type="text" name="info" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        
+
+                    </div>
+                    <div style="display: flex; justify-content:center;">
+                        <input type="submit" value="REGISTER">
+                    </div>
+                </form>
+
+                
+                </div>
+            <div id="independent-adjudicator" style="display: none;">
+                <form action="submit/" method="POST">
+                    {% csrf_token %}
+                    <p class="mandatory-field">Fields marked <span style="color: red;">*</span> are mandatory</p>
+                    <div class="info">
+                        <div class="input-field">
+                            <p>Name<span style="color: red;">*</span></p>
+                            <input type="text" name="name" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Email ID <span style="color: red;">*</span></p>
+                            <input type="email" name="email" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Institution( current/previous)  <span style="color: red;">*</span></p>
+                            <input type="text" name="college2"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Contact No. <span style="color: red;">*</span></p>
+                            <input type="number" name="contactno3" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Any additional information you would like to tell to us <span style="color: red;">*</span></p>
+                            <input type="text" name="info" spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <p>List Past Experience (if any)</p>
+                        <div class="input-field">
+                            <p>Name of tournament </p>
+                            <input type="text" name="tourname"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Year </p>
+                            <input type="text" name="year"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Format </p>
+                            <input type="text" name="format"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Estimate size of tournament </p>
+                            <input type="text" name="size"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Position of Break  </p>
+                            <input type="text" name="pob"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Furthest outround spoken</p>
+                            <input type="text" name="outroundSpoken"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+                        <div class="input-field">
+                            <p>Speaker awards if applicable</p>
+                            <input type="text" name="awards"  spellcheck="false" data-ms-editor="true" style="width: 100%;">
+                        </div>
+
+                    </div>
+                    <div style="display: flex; justify-content:center;">
+                        <input type="submit" value="REGISTER">
+                    </div>
+                </form>
+
+            </div>
         </div>
 
     </div>
@@ -638,6 +773,19 @@
         console.log("{{AdjudicatorsForm}}")
     </script>
     <script>
+        registercontainer
+
+        $("#registercontainer").click(function() {
+            $("#team-registration").show();
+            $("#independent-adjudicator").hide();
+            $("#cross-open").hide();
+            $('#modallist1').removeClass('modal-list2-inactive');
+            $('#modallist1').addClass('modal-list2-active');
+            $('#modallist2').removeClass('modal-list2-active');
+            $('#modallist2').addClass('modal-list2-inactive');
+            $('#modallist3').removeClass('modal-list2-active');
+            $('#modallist3').addClass('modal-list2-inactive');
+        });
         $("#modal-list1").click(function() {
             $("#team-registration").show();
             $("#independent-adjudicator").hide();
