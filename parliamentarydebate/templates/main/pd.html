@@ -81,11 +81,12 @@
             top: 1vw;
             left: 3vw;
             width: 4vw;
+            
         }
         #pd{
             position: relative;
             top: 1.1vw;
-            left: -14vw;
+            left: -12vw;
             font-family: 'Lato', sans-serif;
             font-weight: bold;
             font-size: 5vw
@@ -158,6 +159,312 @@
             display: flex;
             justify-content: center;
         }
+        #aboutText{
+           font-size: 8px;
+           
+        }
+        .rect1 {
+        height: 28vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 20vh;
+        z-index: -1;
+    }
+    .rect2 {
+        height: 28vw;
+        width: 50%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 29vh;
+        z-index: -1;
+        float: right;
+    }
+    #highlightshead {
+        text-align: right;
+        margin-right: 20px;
+      font-weight:700;
+    
+    }
+    .highlightimg{
+        transform: scale(2);
+        padding-bottom: 5px;
+        margin-top: 20px;
+    }
+    #prizeshead{
+        text-align: left;
+        margin-left: 20px;
+        font-weight:700;
+    }
+    .rect3 {
+        height: 17vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 23vh;
+        z-index: -1;
+        float: left;
+    }
+    .prizesimg{
+        transform: scale(2);
+        padding-bottom: 5px;
+        margin-top: 10px;
+    
+      
+    }
+    .prizecontent{
+        margin-left: 45vw; 
+        margin-top: 50px;
+  transform: scale(1.1);
+    }
+    .rect4 {
+        height: 17vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 40vh;
+        z-index: -1;
+        float: right;
+    }
+    .registercontent{
+        margin-right: 43vw; 
+        margin-top: 50px;
+        transform: scale(1.2);
+        
+    }
+    .registerimg{
+        transform: scale(2);
+        padding-bottom: 5px;
+        margin-top: 10px;
+    }
+    #registerbutton{
+        transform: scale(1.4);
+        border-radius: 12px;
+        border-width: 0px;
+     
+    }
+    #registercontainer{
+       
+
+    }
+    .highlightcontent{
+        transform: scale(1.1);
+    }
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    
+    }
+    /* Modal Content */
+    .modal-content {
+        background-color: #1E1E1E;
+        margin: auto;
+        padding: 24px;
+        width: 40vh;
+        min-width: 784px;
+        border-radius: 4px;
+        transform: scaleX(.4) scaleY(.5);
+    }
+    .modalhead{
+     display: flex;
+  
+  
+
+    }
+    #modallist1{
+        margin-bottom: 10px;
+
+    }
+    #modallist2{
+        margin-bottom: 10px;
+    }
+    #modallist3{
+        margin-bottom: 10px;
+    }
+    .info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .info input,
+    .info select {
+        padding: 0px;
+        color: #ffffff;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 41px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #C2CFE0;
+    }
+    .input-field p {
+        margin-bottom: 0.7rem;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 8px;
+        /* identical to box height */
+        letter-spacing: 0.01em;
+        color: #9A9A9A;
+    }
+    .input-field:focus-within p {
+        color: #FFD601;
+    }
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 1vw;
+        vertical-align: super;
+        transition: transform 1s;
+    }
+    .close:hover,
+    .close:focus {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transform: rotate(180deg);
+        transition: transform 1s;
+    }
+    #registertitle {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+    }
+    #closeb {
+        font-size: 24px;
+        float: right;
+    }
+    .modal-content ul {
+        display: flex;
+        list-style: none;
+    }
+    .modal-inside {
+        padding: 0vw 0vw 1vw 0vw;
+    }
+    .modal-list2-active {
+        cursor: pointer;
+        padding: 1vw 30px 1vw 30px;
+        font-weight: bold;
+        border-bottom: 0.3vw solid #FFD601;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .modal-list2-inactive {
+        cursor: pointer;
+        padding: 1vw 20px 1vw 20px;
+        font-weight: bold;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .modal-list1-active {
+        padding: 1vw 5vw 1vw 5vw;
+        border-bottom: 0.3vw solid #FFD601;
+        font-weight: bold;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .modal-list1-inactive {
+        padding: 1vw 3vw 1vw 3vw;
+        font-weight: bold;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    #modal-list2-active {
+        padding: 1vw 2vw 1vw 2vw;
+        border-bottom: 0.2vw solid #FFD601;
+    }
+    .rect5 {
+        height: 17vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 35vw;
+        z-index: -1;
+        float: left;
+    }
+    #registercontainer {
+        margin-top: 1vw;
+        margin-left: 44vw;
+    }
+    #registerbutton {
+        background-color: #0DFF56;
+        border-radius: 50px;
+        padding: 0.6vw 3vw 0.6vw 3vw;
+        color: white;
+        border: none;
+    }
+    #registrationbox {
+        width: 100%;
+        height: 100%;
+        background-color: green;
+        position: absolute;
+        top: 0;
+    }
+    #adjudicators{
+        text-align: left;
+        margin-left: 20px;
+      font-weight:700;
+    
+    }
+    #team{
+        text-align: right;
+        margin-right: 20px;
+      font-weight:700;
+    
+
+    }
+    #teamcontent{
+        margin-right: 35vw;
+        transform: translateX(-4vh) ;
+    
+    }
+    #contact{
+       transform:translateX(6vw);
+       width: 100%;
+       
+       
+    }
+    .contacthead{
+        font-size:3vw;
+ 
+    }
+    .contact1 ,.contact2{
+        font-size: 2.5vw;
+        
+    }
     }
 
     /* For screen sizes greater than 480px */
@@ -298,6 +605,157 @@
         #toggled-nav-bar{
             display: none;
         }
+        #aboutText{
+            text-align:left;
+        }
+        .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+    /* Modal Content */
+    .modal-content {
+        background-color: #1E1E1E;
+        margin: auto;
+        padding: 24px;
+        width: 40vw;
+        min-width: 784px;
+        border-radius: 4px;
+    }
+    .info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .info input,
+    .info select {
+        padding: 0px;
+        color: #ffffff;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 41px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #C2CFE0;
+    }
+    .input-field p {
+        margin-bottom: 0.7rem;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 8px;
+        /* identical to box height */
+        letter-spacing: 0.01em;
+        color: #9A9A9A;
+    }
+    .input-field:focus-within p {
+        color: #FFD601;
+    }
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 1vw;
+        vertical-align: super;
+        transition: transform 1s;
+    }
+    .close:hover,
+    .close:focus {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transform: rotate(180deg);
+        transition: transform 1s;
+    }
+    #registertitle {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+    }
+    #closeb {
+        font-size: 24px;
+        float: right;
+    }
+    .modal-content ul {
+        display: flex;
+        list-style: none;
+    }
+    .modal-inside {
+        padding: 0vw 0vw 1vw 0vw;
+    }
+    .modal-list2-active {
+        cursor: pointer;
+        padding: 1vw 30px 1vw 30px;
+        font-weight: bold;
+        border-bottom: 0.3vw solid #FFD601;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .modal-list2-inactive {
+        cursor: pointer;
+        padding: 1vw 20px 1vw 20px;
+        font-weight: bold;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .modal-list1-active {
+        padding: 1vw 5vw 1vw 5vw;
+        border-bottom: 0.3vw solid #FFD601;
+        font-weight: bold;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .modal-list1-inactive {
+        padding: 1vw 3vw 1vw 3vw;
+        font-weight: bold;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    #modal-list2-active {
+        padding: 1vw 2vw 1vw 2vw;
+        border-bottom: 0.2vw solid #FFD601;
+    }
+    .rect5 {
+        height: 17vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 35vw;
+        z-index: -1;
+        float: left;
+    }
+    
     }
     
 </style>
@@ -359,11 +817,11 @@
     <!-- Introductory Image done -->
 
     </nav>
-    <section id="about"  class="organise" style="height:100%;padding-top:5vw;">
+    <section id="about"  class="organise" style="height:100%;padding-top:5vw;text-align: left; margin: 20px;">
 
-        <span style="color:#FFD601">About </span>
+        <span style="color:#FFD601; " class="abouthead">About </span>
        <br><br>
-        <p class="para" style="text-align:left;"">Lorem ipsum dolor sit amet,consectetur adipiscing elit. Orci nisl aliquet interdum<br>
+        <p class="para" style="text-align:left ; " id="aboutText">Lorem ipsum dolor sit amet,consectetur adipiscing elit. Orci nisl aliquet interdum<br>
          habitasse imperdiet. Velit nulla nisi, curabitur sagittis eu nec luctus nec morbi.<br>
          Ullamcorper blandit amet eget vitae. A vel fringilla senectus fermentum. Dictum proin <br>
          habitasse vulputate egestas feugiat ligula bibendum. Purus dolor, magna sit mollis mi <br>
@@ -374,20 +832,20 @@
 
   <section id="highlights"  class="organise">
 
-    <div class="titlecontainerright" style="color:#FFD601;margin-top:1vw;">Highlights</div>
+    <div class="titlecontainerright" id="highlightshead" style="color:#FFD601;margin-top:1vw;">Highlights</div>
 
 
-   <table > 
+   <table class="highlightcontent"> 
     <tr style="text-align:center;" >
-        <td><img style="height:6vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/asianformat.png" %}" alt="">
+        <td><img style="height:6vw;text-align:center;margin-bottom:2vw" class="highlightimg" src="{% static "main/images/asianformat.png" %}" alt="">
 
-            <h4 style="font-size:1.5vw;margin-bottom:2vw">ASIAN FORMAT</h4>
+            <h4 style="font-size:1.5vw;margin-bottom:2vw;">ASIAN FORMAT</h4>
 
            <p style="font-size:1.3vw"> Debate will be held in 3v3
             Asian Parliamentary Debate
             format</p></td>
 
-        <td><img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/Ellipse.png" %}" alt="">
+        <td><img style="height:5vw;text-align:center;margin-bottom:2vw" class="highlightimg" src="{% static "main/images/Ellipse.png" %}" alt="">
 
             <h4 style="font-size:1.5vw;margin-bottom:2vw">N+1 RULE</h4>
 
@@ -395,7 +853,7 @@
             followed for adjudicator slots</p></td>
 
 
-                <td><img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/winner.png" %}" alt="">
+                <td><img style="height:5vw;text-align:center;margin-bottom:2vw" class="highlightimg" src="{% static "main/images/winner.png" %}" alt="">
 
                     <h4 style="font-size:1.5vw;margin-bottom:2vw">ATTRACTIVE PRIZES</h4>
 
@@ -409,12 +867,12 @@
 <div class="rect2"></div>
 <section id="prizes"  class="organise">
 
-    <div class="titlecontainerleft"  style="color:#FFD601">Prizes</div>
+    <div class="titlecontainerleft"  style="color:#FFD601" id="prizeshead">Prizes</div>
 
 
-   <table > 
-    <tr style="text-align:center;" >
-        <td><img style="height:5vw;text-align:center;margin-bottom:2vw" src={% static "main/images/speaker.png" %} alt="">
+   <table class="prizecontent" > 
+    <tr  >
+        <td><img style="height:5vw;text-align:center;margin-bottom:2vw" src={% static "main/images/speaker.png" %} alt="" class="prizesimg">
 
             <h4 style="font-size:1.5vw;margin-bottom:2vw">BEST 3 SPEAKER
                 AWARD</h4>
@@ -422,14 +880,14 @@
            <p style="font-size:1.3vw"> Worth Rs. 24,000
             </p></td>
 
-        <td><img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/winner.png" %}" alt="">
+        <td><img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/winner.png" %}" alt="" class="prizesimg">
 
             <h4 style="font-size:1.5vw;margin-bottom:2vw">WINNER</h4>
 
             <p style="font-size:1.3vw">Worth Rs. 80,000</p></td>
 
 
-                <td><img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/adjudicator.png" %}" alt="">
+                <td><img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/adjudicator.png" %}" alt="" class="prizesimg">
 
                     <h4 style="font-size:1.5vw;margin-bottom:2vw">BEST 3 ADJUDICATOR AWARD</h4>
 
@@ -447,10 +905,10 @@
     <div class="titlecontainerright" style="color:#FFD601">Registration Fee</div>
 
 
-   <table > 
+   <table class="registercontent" > 
     <tr style="text-align:center;" >
         <td>
-            <img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/team.png" %}" alt="">
+            <img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/team.png" %}" alt="" class="registerimg">
             <h4 style="font-size:1.5vw;margin-bottom:2vw">Team </h4>
 
            <p style="font-size:1.3vw"> Rs. 2400/- 
@@ -459,7 +917,7 @@
             </p></td>
 
         <td>
-            <img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/adjudicator.png" %}" alt="">
+            <img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/adjudicator.png" %}" alt="" class="registerimg">
             <h4 style="font-size:1.5vw;margin-bottom:2vw">Adjudicator</h4>
 
             <p style="font-size:1.3vw"> Rs. 800/-
@@ -469,7 +927,7 @@
 
 
                 <td>
-                    <img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/accomodation.png" %}" alt="">
+                    <img style="height:5vw;text-align:center;margin-bottom:2vw" src="{% static "main/images/accomodation.png" %}" alt="" class="registerimg">
                     <h4 style="font-size:1.5vw;margin-bottom:2vw">Accommodation</h4>
 
                     <p style="font-size:1.3vw">Rs. 800/-
@@ -482,7 +940,7 @@
     </div>
 </section>
 <div class="rect4"></div>
-<div  id="registercontainer"><button type="button" id="registerbutton" style="background-color:#FFD601;margin-top:3vw;margin-left: 4vw;"><span style="font-size:1.5vw;border:none;color:black;">Register</span></button></div>
+<div  id="registercontainer"><button type="button" id="registerbutton" style="background-color:#FFD601;margin-top:3vw;margin-left: 4vw;"><span class="registerbttn" style="font-size:1.5vw;border:none;color:black;">Register</span></button></div>
 
 
     <div id="myModal" class="modal">
@@ -492,7 +950,7 @@
             <div class="modal-inside">
                 <span class="close material-symbols-outlined" id="closeb">close</span><span id="registertitle">Register As</span></div>
 
-            <ul style="display: flex;justify-content:space-between;">
+            <ul style="display: flex;justify-content:space-between;" class="modalhead">
                 <li id="modallist1" class="modal-list2-active"><a id="modal-list1">Institutional Team/Contingent</a></li>
                 <li id="modallist2" class="modal-list2-inactive"><a id="modal-list2">Cross/Open</a></li>
                 <li id="modallist3" class="modal-list2-inactive"><a id="modal-list3">Independent Adjudicator</a></li>
@@ -686,18 +1144,18 @@
 <div class="rect5"></div>
 <section id="highlights"  class="organise">
 
-    <div class="titlecontainerright" style="color:#FFD601" id="team">The Team</div>
+    <div class="titlecontainerright" style="font-size:3.5vw;text-align:centre;font-weight:bold;margin-top:8vw;color:#FFD601;" id="team">The Team</div>
 
 
 
-    <table style="margin-left:vw;"> 
-        <tr style="text-align:center;" >
+    <table style="margin-left:vw;" id="teamcontent"> 
+        <tr  >
 
 
 
 
 
-                    <td style="margin-right:vw;"><img style="text-align:center;margin-bottom:2vw" src="{% static "main/images/akansha.png" %}" alt=""  class="rounded-circle">
+                    <td ><img style="text-align:center;margin-bottom:2vw" src="{% static "main/images/akansha.png" %}" alt=""  class="rounded-circle">
 
                         <h4 style="font-size:1.5vw;margin-bottom:2vw">Akansha Menon</h4>
 
@@ -726,13 +1184,14 @@
 <section id="footer">
 
     <div style="margin:auto;width:30%;padding:4vw;" id="contact">
-    <h4 style="font-size:1.5vw;">Contact Us</h4>
-    <span style="font-size:1vw;text-align:center">pd@alcheringa.in</p>
-    <span style="font-size:1vw;text-align:center;">
+    <h4  class="contacthead">Contact Us</h4>
+    <span style="text-align:center" class="contact1">pd@alcheringa.in</p>
+    <span style="text-align:center;" class="contact2">
       Phone no:+91 365124892
-    </span>
-    <div style="font-size:1.5vw;padding-top:5vw;">Alcheringa 2022</h4>
-    <div>
+    </p>
+    <span style="padding-top:5vw; text-align: center;">Alcheringa 2022</p>
+  
+    <!-- <div>
         <ul>
             <li></li>
             <li>
@@ -742,7 +1201,7 @@
             <li></li>
             <li></li>
         </ul>
-    </div>
+    </div> -->
 </div>
 </section>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
