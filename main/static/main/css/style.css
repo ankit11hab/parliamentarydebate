@@ -1,0 +1,499 @@
+{
+    % load static %
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* nav {
+    background-position: center;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+nav h1 {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+nav p {
+    text-align: center;
+    margin-top: 10vh;
+    margin: 10vh auto 0 auto;
+    width: 60%;
+}
+
+#IITG_White {
+    float: left;
+    height: 5vw;
+}
+
+#Full_White {
+    float: right;
+    height: 4vw;
+}
+ */
+
+/* Style the navigation menu */
+/* 
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+} */
+
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+/* 
+.topnav #myLinks {
+    display: none;
+} */
+
+
+/* Style navigation menu links */
+
+/* .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+ */
+
+/* Style the hamburger menu */
+
+/* .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+ */
+
+/* Add a grey background color on mouse-over */
+
+/* .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+} */
+
+
+/* Style the active link (or home/logo) */
+
+.active {
+    color: white;
+}
+
+@media only screen and (min-width: 800px) {
+    #IITG_White {
+        float: left;
+    }
+    #Full_White {
+        float: right;
+    }
+    .topnav {
+        display: none;
+    }
+    nav h1 {
+        text-align: left;
+    }
+    nav {
+        padding: 2%;
+        width: 100%;
+        background-image: url("images/Untitled-2@2x.png");
+        background-size: cover;
+    }
+    nav .organise {
+        margin-top: 4vh;
+    }
+    nav section p {
+        text-align: right;
+        font-size: 1.5vw;
+        margin-top: 6vh;
+    }
+    nav ul {
+        margin-top: 5%;
+    }
+    ul {}
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        color: grey;
+    }
+    li {
+        list-style: none;
+    }
+    #toregister {
+        background-color: #0DFF56;
+        border-radius: 100px;
+        padding-right: 0.8vw;
+        padding-left: 0.8vw;
+    }
+    #about p {
+        text-align: right;
+        font-size: 1.5vw;
+        margin-top: 6vw;
+    }
+    #about span {
+        text-align: right;
+        font-size: 4vw;
+    }
+    .rect1 {
+        height: 17vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 20vw;
+        z-index: -1;
+    }
+    .organise {
+        margin: auto;
+        width: 70%;
+    }
+    #about {
+        margin-top: 10%;
+    }
+    #hightlights p {
+        text-align: right;
+        font-size: 1.5vw;
+        margin-top: 5vw;
+    }
+    .titlecontainerright {
+        text-align: right;
+        font-size: 3.5vw;
+        margin-top: 15vw;
+        margin-bottom: 6vw;
+    }
+    .rect2 {
+        height: 17vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 26vw;
+        z-index: -1;
+        float: right;
+    }
+    #hightlights {}
+    #highlightscontent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 11vh auto 0 auto;
+    }
+    #highlightscontent div {
+        padding: 1vw 4vw;
+        text-align: center;
+    }
+    #highlightscontent img {
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+    td {
+        padding-right: 5vw;
+        padding-left: 5vw;
+    }
+    .rect3 {
+        height: 17vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 23vw;
+        z-index: -1;
+        float: left;
+    }
+    .titlecontainerleft {
+        text-align: left;
+        font-size: 4vw;
+        margin-top: 15vw;
+        margin-bottom: 6vw;
+    }
+    .rect4 {
+        height: 17vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 17vw;
+        z-index: -1;
+        float: right;
+    }
+    #registercontainer {
+        margin-top: 1vw;
+        margin-left: 38vw;
+    }
+    #registerbutton {
+        background-color: #0DFF56;
+        border-radius: 50px;
+        padding: 0.6vw 3vw 0.6vw 3vw;
+        color: white;
+        border: none;
+    }
+    #registrationbox {
+        width: 100%;
+        height: 100%;
+        background-color: green;
+        position: absolute;
+        top: 0;
+    }
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+    /* Modal Content */
+    .modal-content {
+        background-color: #1E1E1E;
+        margin: auto;
+        padding: 24px;
+        width: 40vw;
+        min-width: 784px;
+        border-radius: 4px;
+    }
+    .info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .info input,
+    .info select {
+        padding: 0px;
+        color: #ffffff;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 41px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #C2CFE0;
+    }
+    .input-field p {
+        margin-bottom: 0.7rem;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 8px;
+        /* identical to box height */
+        letter-spacing: 0.01em;
+        color: #9A9A9A;
+    }
+    .input-field:focus-within p {
+        color: #FFD601;
+    }
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 1vw;
+        vertical-align: super;
+        transition: transform 1s;
+    }
+    .close:hover,
+    .close:focus {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transform: rotate(180deg);
+        transition: transform 1s;
+    }
+    #registertitle {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+    }
+    #closeb {
+        font-size: 24px;
+        float: right;
+    }
+    .modal-content ul {
+        display: flex;
+        list-style: none;
+    }
+    .modal-inside {
+        padding: 0vw 0vw 1vw 0vw;
+    }
+    .modal-list2-active {
+        cursor: pointer;
+        padding: 1vw 30px 1vw 30px;
+        font-weight: bold;
+        border-bottom: 0.3vw solid #FFD601;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .modal-list2-inactive {
+        cursor: pointer;
+        padding: 1vw 20px 1vw 20px;
+        font-weight: bold;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .modal-list1-active {
+        padding: 1vw 5vw 1vw 5vw;
+        border-bottom: 0.3vw solid #FFD601;
+        font-weight: bold;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .modal-list1-inactive {
+        padding: 1vw 3vw 1vw 3vw;
+        font-weight: bold;
+        transition: padding 2s;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    #modal-list2-active {
+        padding: 1vw 2vw 1vw 2vw;
+        border-bottom: 0.2vw solid #FFD601;
+    }
+    .rect5 {
+        height: 17vw;
+        width: 45%;
+        background-color: #1e1e1e;
+        position: relative;
+        bottom: 35vw;
+        z-index: -1;
+        float: left;
+    }
+    #footer {
+        width: 100%;
+        background-color: #1e1e1e;
+        text-align: center;
+    }
+    /* Style inputs, select elements and textareas */
+    /* Style the label to display next to the inputs */
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+    /* Style the submit button */
+    input[type=submit] {
+        font-weight: bold;
+        border: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        gap: 10px;
+        width: 105px;
+        height: 35px;
+        background: #FFD601;
+        border-radius: 33px;
+        /* Inside auto layout */
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+        margin: 0px !important;
+        font-family: 'Lato';
+        font-weight: 500;
+        font-size: 16px;
+        color: #211200;
+        transition: background 0.2s ease-in-out;
+    }
+    input[type=submit]:hover {
+        background: #877000;
+        transition: background 0.2s ease-in-out;
+    }
+    /* Style the container */
+    .container {
+        padding: 20px;
+    }
+    /* Floating column for labels: 25% width */
+    .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+    }
+    /* Floating column for inputs: 75% width */
+    .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .col-25,
+        .col-75,
+        input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+    form td {
+        padding: 0.5vw 1vw 0.5vw 1vw;
+    }
+    #adjudicator-registration {
+        display: none;
+    }
+}
+
+.mandatory-field {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    identical to box height
+    margin-bottom: 30px;
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+}
