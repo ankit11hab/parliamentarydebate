@@ -161,7 +161,7 @@ nav p {
     }
     #about span {
         text-align: right;
-        font-size: 4vw;
+        font-size: 3vw;
     }
     .rect1 {
         height: 17vw;
@@ -185,7 +185,7 @@ nav p {
     }
     .titlecontainerright {
         text-align: right;
-        font-size: 3.5vw;
+        font-size: 3vw;
         margin-top: 15vw;
         margin-bottom: 6vw;
     }
@@ -228,7 +228,7 @@ nav p {
     }
     .titlecontainerleft {
         text-align: left;
-        font-size: 4vw;
+        font-size: 3vw;
         margin-top: 15vw;
         margin-bottom: 6vw;
     }

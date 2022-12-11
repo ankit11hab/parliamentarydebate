@@ -171,10 +171,11 @@
             font-family: 'Lato', sans-serif;
         }
         #about p{
-            text-align: left;
+            text-align: justify;
             margin-top: 2vw;
-            font-size: 3.5vw;
+            font-size: 3.3vw;
             padding-right: 10px;
+            line-height: 3.8vw;
         }
         #registercontainer{
             display: flex;
@@ -612,9 +613,10 @@
         }
         .contacthead{
             text-align: center;
-            font-size:4vw;
+            font-size:7vw;
             font-weight: bold;
-            margin-bottom: 2vh;
+            margin-bottom: 2.2vh;
+            color: #FFD601;
         }
         .contact1{
             font-size: 2.9vw;
@@ -812,6 +814,7 @@
         #highlightshead{
             color: #FFD601;
             margin-top: 1vw;
+            font-weight:700
         }
         tr img{
             height: 6vw;
@@ -917,9 +920,11 @@
         }
         .contacthead{
             padding-top: 6vw;
-            margin-top: 1vw;
-            font-weight: bold;
+            margin-top: 0.8vw;
+            font-weight: 700;
             margin-left: 40vw;
+            font-size: 3vw;
+            color: #FFD601;
         }
         .contact1{
             position: relative;
@@ -1041,6 +1046,10 @@
             padding: 1vw 2vw 1vw 2vw;
             border-bottom: 0.2vw solid #FFD601;
         }
+        #about p {
+            font-size: 1.3vw;
+            line-height: 1.9vw;
+        }
     }
 
 </style>
@@ -1053,7 +1062,6 @@
         <li class="nav-item"><a class="nav-link nav-objects" id="about-us" href="#about">About Us </a></li>
         <li class="nav-item left-margin"><a class="nav-link nav-objects " href="#highlights">Highlights </a></li>
         <li class="nav-item left-margin"><a class="nav-link nav-objects " href="#prizes">Prizes </a></li>
-        <li class="nav-item left-margin"><a class="nav-link nav-objects " href="#team">Team </a></li>
         <li class="nav-item left-margin"><a class="nav-link nav-objects " href="#contact">Contact Us</a></li>
         <li id="register-button"><a id="reg" href="#registration" >REGISTER</a></li>
         
@@ -1100,9 +1108,9 @@
     </div>
     <!-- Introductory Image done -->
     <section id="about"  class="organise">
-        <span style="color:#FFD601; " class="abouthead">About</span>
+        <span style="color:#FFD601; font-weight:700" class="abouthead">About</span>
         <br><br>
-        <p class="para" style="text-align:left ; " id="aboutText">
+        <p class="para" style="text-align:justify ; " id="aboutText">
           The winds of change are blowing in IIT Guwahati campus on the banks of the majestic River Brahmaputra and IIT Guwahati is thrilled to invite you to join us for the upcoming Parliamentary debate event which is going to happen from 2nd -5th February, 2023. This is your chance to be part of the action and make your voice heard during the debate. Whether you are a student, an alumnus, or an enthusiastic debater, everyone is welcome to this unique opportunity to witness the heated discourse between intelligent minds. The excitement is building up, so be sure to mark your calendar and join us for this thrilling event!
         </p>
     </section>
@@ -1128,7 +1136,7 @@
                     <td>
                         <img class="highlightimg" src="{% static "main/images/winner.png" %}" alt="">
                         <h5>ATTRACTIVE PRIZES</h5>
-                        <p>Prizes worth Rs 1,20,000 <br> to be won in total
+                        <p>Worth Rs 1,20,000
                         </p>
                     </td>
                 </tr>
@@ -1137,7 +1145,7 @@
     </section>
     <div class="rect2"></div>
     <section id="prizes"  class="organise">
-        <div class="titlecontainerleft"  style="color:#FFD601" id="prizeshead">Prizes</div>
+        <div class="titlecontainerleft"  style="color:#FFD601; font-weight: 700;" id="prizeshead">Prizes</div>
             <table class="prizecontent" > 
                 <tr style="text-align:center;" >
                     <td>    
@@ -1155,7 +1163,7 @@
                     <td class="last">
                         <img src="{% static "main/images/adjudicator.png" %}" alt="" class="prizesimg">
                         <h5>BEST 3 ADJUDICATOR AWARDS</h5>
-                        <p>Prizes worth Rs. 21,000 <br> to be won in total</p>
+                        <p>Worth Rs. 21,000
                     </td>
                 </tr>
             </table>
@@ -1163,7 +1171,7 @@
     </section>
     <div class="rect3"></div>
     <section id="registration"  class="organise">
-        <div class="titlecontainerrightt" style="color:#FFD601" id="registration-head">Registration Fee</div>
+        <div class="titlecontainerrightt" style="color:#FFD601; font-weight: 700;" id="registration-head">Registration Fee</div>
             <table class="registercontent" > 
                 <tr style="text-align:center;" >
                     <td>
@@ -1370,24 +1378,25 @@
     </section> -->
   
     <div class="rect7"></div>
-    <section id="the-team"  class="organise">
-        <div class="titlecontainerright" id="team"></div>
-            <table id="teamcontent" style="transform:translateY(-40px); margin: auto; text-align: center;"> 
-                <tr>
-                    <td>
-                        <img src="{% static "main/images/Rishi.jpg" %}" alt=""  class="rounded-circle" style="width:100px ;height: 100px; transform: scale(1.1); ">
-                        <h4>Rishi Kesava Reddy</h4>
-                        <p> Parliamentary Debate, Convenor</p>
-                        <p> +91 91 33 7789 70</p>
-                    </td>
-                  
-                </tr>
-            </table>
-        </div>
-    </section>
+    
    
     <section id="footer">
         <h4  class="contacthead" id="contact" style="margin: auto ;">Contact Us</h4>
+        <section id="the-team"  class="organise">
+            <div class="titlecontainerright" id="team"></div>
+                <table id="teamcontent" style="transform:translateY(-40px); margin: auto; text-align: center;"> 
+                    <tr>
+                        <td>
+                            <img src="{% static "main/images/Rishi.jpg" %}" alt=""  class="rounded-circle" style="width:200px ;height: 200px; transform: scale(1.1); ">
+                            <h5>Rishi Kesava Reddy</h5>
+                            <p> Parliamentary Debate, Convenor</p>
+                            <p> +91 91 33 7789 70</p>
+                        </td>
+                      
+                    </tr>
+                </table>
+            </div>
+        </section>
         <div class="contact1">
             pd@alcheringa.in
         </div>
