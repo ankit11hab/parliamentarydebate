@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PD Details</title>
+    <style>
+        table, th, td {
+  border:1px solid black;
+}
+    </style>
+</head>
+<body>
+    <!-- teams -->
+    <div style="margin:10vw">
+        <div style="text-align:center;font-size: x-large;font-weight: bold;margin-bottom: 2%;">Teams</div>
+        <table style="width:80%;margin:auto">
+            <tr>
+              <th>Sl No.</th>
+              <th>POCName</th>
+              <th>Email</th>
+              <th>College Name</th>
+              <th>Phone Number</th>
+              <th>Team Slots</th>
+              <th>Additional Info</th>
+            </tr>
+
+            {% for user in teams %}
+            <tr>
+
+                <td>{{ forloop.counter }}</td>
+                <td>{{user.POCname}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.college}}</td>
+                <td>{{user.contactno}}</td>
+                <td>{{user.teamSlots}}</td>
+                <td>{{user.info}}</td>
+                
+            </tr>
+            {% endfor %}
+          
+          </table>
+    </div>
+
+    <!-- adjudicators  -->
+    <div style="margin:10vw">
+        <div style="text-align:center;font-size: x-large;font-weight: bold;margin-bottom: 2%;">Adjudicators</div>
+        <table style="width:80%;margin:auto">
+            <tr>
+              <th>Sl No.</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>College Name</th>
+              <th>Phone Number</th>
+              <th>Additional Info</th>
+              <th>Tournament Name</th>
+              <th>Year</th>
+              <th>Format</th>
+              <th>Size</th>
+              <th>POB</th>
+              <th>OutroundSpoken</th>
+              <th>Awards</th>
+            </tr>
+
+            {% for user in adjudicators %}
+            <tr>
+
+                <td>{{ forloop.counter }}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.college}}</td>
+                <td>{{user.contactno}}</td>
+                <td>{{user.info}}</td>
+                <td>{{user.TournamentName}}</td>
+                <td>{{user.Year}}</td>
+                <td>{{user.Format}}</td>
+                <td>{{user.Size}}</td>
+                <td>{{user.POB}}</td>
+                <td>{{user.OutroundSpoken}}</td>
+                <td>{{user.awards}}</td>  
+
+            </tr>
+            {% endfor %}
+          
+          </table>
+    </div>
+
+    <!-- crossopen -->
+    <div style="margin:10vw">
+        <div style="text-align:center;font-size: x-large;font-weight: bold;margin-bottom: 2%;">Teams</div>
+        <table style="width:80%;margin:auto">
+            <tr>
+              <th>Sl No.</th>
+              <th>POCName</th>
+              <th>Email</th>
+              <th>Country</th>
+              <th>Phone Number</th>
+              <th>Team Name</th>
+              <th>Additional Info</th>
+            </tr>
+
+            {% for user in crossopen %}
+            <tr>
+
+                <td>{{ forloop.counter }}</td>
+                <td>{{user.Name_of_Poc}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.Country}}</td>
+                <td>{{user.contactno}}</td>
+                <td>{{user.TeamName}}</td>
+                <td>{{user.info}}</td>
+                
+            </tr>
+            {% endfor %}
+          
+          </table>
+    </div>
+</body>
+</html>

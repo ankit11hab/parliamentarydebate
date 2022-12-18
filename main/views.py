@@ -78,3 +78,8 @@ def updatedata(request):
             crossopen.save()
             return redirect('/')
 
+def pd_details(request):
+    team = teams.objects.all()
+    Adjudicators = adjudicators.objects.all()
+    CrossOpen = crossOpen.objects.all()
+    return render(request,'main/user_details.html',{'teams':team,'adjudicators':Adjudicators,'crossopen':CrossOpen})
